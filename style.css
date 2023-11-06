@@ -1,0 +1,36 @@
+
+
+html{
+  min-height: 100%;
+}
+
+body{
+  text-align: center;
+  background-color: #d9d9d9;
+  min-height: 100%;
+}
+  
+.divImg{
+  display: block;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin-top: 0px;
+  background-size: 100%, contain;
+}
+
+th{
+  text-align: center;
+}
+
+table {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  border-collapse: collapse;
+  width: 600px;
+  height: 200px;
+  border: 1px solid #bdc3c7;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+}
