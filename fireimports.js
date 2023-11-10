@@ -1,4 +1,3 @@
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
 
 // Your web app's Firebase configuration
@@ -33,10 +32,8 @@ function addItemToTable(name) {
   let td1 = document.createElement("td");
   let td2 = document.createElement("td");
 
-  // td1.innerHTML = clNumber++;
   td2.innerHTML = name;
 
-  // trow.appendChild(td1);
   trow.appendChild(td2);
 
   tbody.appendChild(trow);
@@ -51,15 +48,23 @@ function addAllItemTable(client) {
 }
 
 function getAllData() {
-  const dbRef = ref(db);
+  const dbRef = ref(db, "Clients");
 
-  get(child(dbRef, "Clients")).then((snapshot) => {
+  // get(child(dbRef, "Clients")).then((snapshot) => {
+  //   let nameOfClientes = [];
+  //   snapshot.forEach((snapshotChild) => {
+  //     nameOfClientes.push(snapshotChild.val());
+  //   });
+  //   addAllItemTable(nameOfClientes);
+  // });
+  onValue(dbRef, (snapshot) => {
     let nameOfClientes = [];
     snapshot.forEach((snapshotChild) => {
       nameOfClientes.push(snapshotChild.val());
     });
+    nameOfClientes.reverse();
     addAllItemTable(nameOfClientes);
   });
 }
+
 window.onload = getAllData;
- 
