@@ -62,7 +62,6 @@ function getAllData() {
     snapshot.forEach((snapshotChild) => {
       nameOfClientes.push(snapshotChild.val());
     });
-    nameOfClientes.reverse();
     addAllItemTable(nameOfClientes);
   });
 }
