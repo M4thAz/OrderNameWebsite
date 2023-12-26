@@ -29,13 +29,10 @@ let tbody = document.getElementById("tbody1");
 
 function addItemToTable(name) {
   let trow = document.createElement("tr");
-  let td1 = document.createElement("td");
   let td2 = document.createElement("td");
 
   td2.innerHTML = name;
-
   trow.appendChild(td2);
-
   tbody.appendChild(trow);
 }
 
@@ -50,13 +47,6 @@ function addAllItemTable(client) {
 function getAllData() {
   const dbRef = ref(db, "Clients");
 
-  // get(child(dbRef, "Clients")).then((snapshot) => {
-  //   let nameOfClientes = [];
-  //   snapshot.forEach((snapshotChild) => {
-  //     nameOfClientes.push(snapshotChild.val());
-  //   });
-  //   addAllItemTable(nameOfClientes);
-  // });
   onValue(dbRef, (snapshot) => {
     let nameOfClientes = [];
     snapshot.forEach((snapshotChild) => {

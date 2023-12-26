@@ -20,16 +20,31 @@ body{
 }
 
 th{
-  text-align: center;
+  text-align:center;
+  padding-bottom:10px;
+  padding-top: 5px;
+  background-color:transparent;
 }
+
+
+td{
+  background-color: rgba(9, 9, 9, 0.523);
+  border-bottom: 1px solid black;
+  border-bottom-left-radius: 1px solid black;
+  padding-bottom: 1.5px;
+  border-top-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+  color:white;
+}
+
 
 table {
   position: absolute;
   left: 50%;
-  top: 70%;
+  top: 50%;
   transform: translate(-50%, -50%);
-  border-collapse: collapse;
-  width: 600px;
+  border-radius: 5px;
+  width: 200px;
   height: 200px;
   border: 1px solid #bdc3c7;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
