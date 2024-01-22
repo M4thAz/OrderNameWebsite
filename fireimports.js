@@ -1,15 +1,16 @@
+//importe da bd firebase
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
 
-// Your web app's Firebase configuration
+// Your web app's Firebase configuration, you can get it in "project config" at Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyBmib13y4DzDgxv9sQPVmCslM5OgzqlF3w",
-  authDomain: "ordername-2e429.firebaseapp.com",
+  apiKey: "",
+  authDomain: "",
   databaseURL:
-    "https://ordername-2e429-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "ordername-2e429",
-  storageBucket: "ordername-2e429.appspot.com",
-  messagingSenderId: "549462882995",
-  appId: "1:549462882995:web:63e003de3685786b564ec6",
+    "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
 };
 
 // Initialize Firebase
